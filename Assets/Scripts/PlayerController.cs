@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class PlayerController : MonoBehaviour
 
     // health
     public int health = 5;
+
+    // score text
+    public Text scoreText;
 
     // Start is called before the first frame update
     void Start()
@@ -42,7 +46,8 @@ public class PlayerController : MonoBehaviour
         {
 			score++;
 			Destroy(other.gameObject);
-			Debug.Log(string.Format("Score: {0}", score));
+            SetScoreText();
+			// Debug.Log(string.Format("Score: {0}", score));
 		}
 
         if (other.tag == "Trap")
@@ -65,5 +70,11 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Game Over!");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+    }
+
+    void SetScoreText()
+    {
+        //scoreText.text = (string.Format("Score: {0}", score));
+        scoreText.text = $"Score: {score}";
     }
 }
