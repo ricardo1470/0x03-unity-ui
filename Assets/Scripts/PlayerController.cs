@@ -6,6 +6,7 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
 public class PlayerController : MonoBehaviour
 {
     // speed
@@ -24,6 +25,15 @@ public class PlayerController : MonoBehaviour
 
     // health text
     public Text healthText;
+
+    // win text
+    public Text WinLoseText;
+
+    // UI object
+    public Image WinLoseBG;
+
+    // game object win lose
+    public GameObject WinLoseObject;
 
     // Start is called before the first frame update
     void Start()
@@ -61,7 +71,8 @@ public class PlayerController : MonoBehaviour
 
         if (other.tag == "Goal")
         {
-            Debug.Log("You win!");
+            You_win();
+            //Debug.Log("You win!");
         }
 
     }
@@ -85,4 +96,13 @@ public class PlayerController : MonoBehaviour
     {
         healthText.text = $"Health: {health}";
     }
+
+    void You_win()
+    {
+        WinLoseText.text = "You Win!";
+        WinLoseText.color = Color.black;
+        WinLoseBG.color = Color.green;
+        WinLoseObject.SetActive(true);
+    }
+
 }

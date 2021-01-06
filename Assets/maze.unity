@@ -3208,7 +3208,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -27.468536, y: -28.059708}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &723274065
@@ -8592,6 +8592,9 @@ MonoBehaviour:
   health: 5
   scoreText: {fileID: 1124360255}
   healthText: {fileID: 563302408}
+  WinLoseText: {fileID: 723274065}
+  WinLoseBG: {fileID: 1146475996}
+  WinLoseObject: {fileID: 1146475994}
 --- !u!1001 &1820468796
 PrefabInstance:
   m_ObjectHideFlags: 0
