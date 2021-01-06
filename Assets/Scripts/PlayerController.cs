@@ -81,9 +81,8 @@ public class PlayerController : MonoBehaviour
     {
         if (health == 0)
         {
-            Game_ver();
+            Game_Over();
             //Debug.Log("Game Over!");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
@@ -104,14 +103,22 @@ public class PlayerController : MonoBehaviour
         WinLoseText.color = Color.black;
         WinLoseBG.color = Color.green;
         WinLoseObject.SetActive(true);
+        StartCoroutine(LoadScene(3));
     }
 
-    void Game_ver()
+    void Game_Over()
     {
         WinLoseText.text = "Game Over!";
         WinLoseText.color = Color.white;
         WinLoseBG.color = Color.red;
         WinLoseObject.SetActive(true);
+        StartCoroutine(LoadScene(3));
+    }
+
+    IEnumerator LoadScene(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 }
