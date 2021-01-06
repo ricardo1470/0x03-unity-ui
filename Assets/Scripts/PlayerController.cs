@@ -85,7 +85,7 @@ public class PlayerController : MonoBehaviour
             //Debug.Log("Game Over!");
         }
 
-        //value keyboard Esc
+        // value keyboard Esc
         if (Input.GetKey(KeyCode.Escape))
         {
             SceneManager.LoadScene("menu");
