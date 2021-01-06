@@ -84,6 +84,12 @@ public class PlayerController : MonoBehaviour
             Game_Over();
             //Debug.Log("Game Over!");
         }
+
+        //value keyboard Esc
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("menu");
+        }
     }
 
     void SetScoreText()

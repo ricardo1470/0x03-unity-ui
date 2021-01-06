@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/maze.unity
     guid: 90e0410ef64dca34bab9040a45a08f7b
+  - enabled: 1
+    path: Assets/menu.unity
+    guid: e81bf3143ce19ba4187a0a6c6d88666e
   m_configObjects: {}
